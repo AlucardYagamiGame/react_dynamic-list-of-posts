@@ -77,9 +77,9 @@ export const App = () => {
   const handleDeleteComment = (commentId: number) => {
     setComments(prev => prev.filter(c => c.id !== commentId));
 
-    client.delete(`/comments/${commentId}`).catch(() => {
-      // опційний пункт (*) — обробка помилки видалення
-    });
+    // The comment is already removed (optimistic update),
+    // so a failed delete request is intentionally ignored.
+    client.delete(`/comments/${commentId}`).catch(() => {});
   };
 
   const showLoader = selectedUser && isPostsLoading;
