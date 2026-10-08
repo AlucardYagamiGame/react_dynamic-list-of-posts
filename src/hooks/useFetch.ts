@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { client } from '../utils/axiosClient';
+import { client } from '../utils/fetchClient';
 
 export function useFetch<T>(url: string | null) {
   const [data, setData] = useState<T | null>(null);

@@ -5,7 +5,7 @@ import 'bulma/css/bulma.css';
 import '@fortawesome/fontawesome-free/css/all.css';
 import './App.scss';
 
-import { client } from './utils/axiosClient';
+import { client } from './utils/fetchClient';
 import { User } from './types/User';
 import { Post } from './types/Post';
 import { Comment, CommentData } from './types/Comment';
